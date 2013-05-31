@@ -1,0 +1,38 @@
+    <div class="row">
+        <?
+        foreach($result as $row) {
+            $title = Util::txtlimit($row['d_name']);
+            $contents = Util::txtlimit($row['d_desc1']);
+        ?>
+        <div class="span4">
+            <img src="<?=$row['d_img2'];?>" class="img-polaroid">
+            <p class="text-left"><strong><?=$title;?></strong><br><?=$contents;?></p>
+        </div>
+        <?
+        }
+        ?>
+        <div class="span4">
+            <img src="img/sample3.jpg" class="img-polaroid">
+            <p class="text-left"><strong>AD TITLE</strong><br>Contents is here!</p>
+        </div>
+        <div class="span4">
+            <img src="img/sample3.jpg" class="img-polaroid">
+            <p class="text-left"><strong>AD TITLE</strong><br>Contents is here!</p>
+        </div>
+        <div class="span4">
+            <img src="img/sample3.jpg" class="img-polaroid">
+            <p class="text-left"><strong>AD TITLE</strong><br>Contents is here!</p>
+        </div>
+        <div class="span4">
+            <img src="img/sample3.jpg" class="img-polaroid">
+            <p class="text-left"><strong>AD TITLE</strong><br>Contents is here!</p>
+        </div>
+        <div class="span4">
+            <img src="img/sample3.jpg" class="img-polaroid">
+            <p class="text-left"><strong>AD TITLE</strong><br>Contents is here!</p>
+        </div>
+        <div class="span4">
+            <img src="img/sample3.jpg" class="img-polaroid">
+            <p class="text-left"><strong>AD TITLE</strong><br>Contents is here!</p>
+        </div>
+    </div>
