@@ -1,38 +1,16 @@
     <div class="row">
         <?
         foreach($result as $row) {
-            $title = Util::txtlimit($row['d_name']);
-            $contents = Util::txtlimit($row['d_desc1']);
+            $title = Util::txtlimit($row['ad_title']);
+            $desc = Util::txtlimit($row['ad_desc']);
+            $admoney = number_format($row['ad_money']);
+            $imgurl = $row['ad_img1'];
         ?>
         <div class="span4">
-            <img src="<?=$row['d_img2'];?>" class="img-polaroid">
-            <p class="text-left"><strong><?=$title;?></strong><br><?=$contents;?></p>
+            <img src="<?=$imgurl;?>" class="img-polaroid">
+            <p class="text-left"><strong><?=$title;?></strong><br><?=$admoney;?> won / <?=$desc;?></p>
         </div>
         <?
         }
         ?>
-        <div class="span4">
-            <img src="img/sample3.jpg" class="img-polaroid">
-            <p class="text-left"><strong>AD TITLE</strong><br>Contents is here!</p>
-        </div>
-        <div class="span4">
-            <img src="img/sample3.jpg" class="img-polaroid">
-            <p class="text-left"><strong>AD TITLE</strong><br>Contents is here!</p>
-        </div>
-        <div class="span4">
-            <img src="img/sample3.jpg" class="img-polaroid">
-            <p class="text-left"><strong>AD TITLE</strong><br>Contents is here!</p>
-        </div>
-        <div class="span4">
-            <img src="img/sample3.jpg" class="img-polaroid">
-            <p class="text-left"><strong>AD TITLE</strong><br>Contents is here!</p>
-        </div>
-        <div class="span4">
-            <img src="img/sample3.jpg" class="img-polaroid">
-            <p class="text-left"><strong>AD TITLE</strong><br>Contents is here!</p>
-        </div>
-        <div class="span4">
-            <img src="img/sample3.jpg" class="img-polaroid">
-            <p class="text-left"><strong>AD TITLE</strong><br>Contents is here!</p>
-        </div>
     </div>

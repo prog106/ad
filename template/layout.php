@@ -25,7 +25,7 @@ class Comm {
         <div class="navbar-inner">
             <ul class="nav">
                 <li><a href="./">Home</a></li>
-                <li><a href="#">Ready...</a></li>
+                <li><a href="adform.php">Ready...</a></li>
             </ul>
         </div>
     </div>

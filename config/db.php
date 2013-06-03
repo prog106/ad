@@ -42,11 +42,11 @@ class MySQL {
 	 * Class Constructor *
 	 * *******************/
 
-	function MySQL($connect_info='coupon2da'){
-        $info['coupon2da'] = array(
-            'database' => 'test1',
-            'username' => 'test1',
-            'password' => 'test123',
+	function MySQL($connect_info='ad'){
+        $info['ad'] = array(
+            'database' => 'ad',
+            'username' => 'ad',
+            'password' => 'ad123',
             'hostname' => 'localhost'
         );
 		$this->database = $info[$connect_info]['database'];
