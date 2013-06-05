@@ -2,25 +2,25 @@
 class AD {
     function ad_list() {
         $db = new MySQL();
-        $sql = "SELECT * FROM ad WHERE now() BETWEEN ad_startdate AND ad_enddate ORDER BY id DESC";
+        $sql = "SELECT * FROM ad WHERE now() BETWEEN ad_startdate AND ad_enddate ORDER BY ad_money DESC, id DESC";
         $result = $db->ExecuteSQL($sql);
         return $result;
     }
 
     function ad_insert($params) {
         $db = new MySQL();
-        $param = array(
-            'ad_startdate' => $params['startdate']
-            ,'ad_enddate' => $params['enddate']
-            ,'ad_title' => $params['title']
-            ,'ad_desc' => $params['desc']
-            ,'ad_money' => $params['money']
-            ,'ad_img1' => $params['img1']
-            ,'ad_img2' => $parmas['img2']
-            ,'ad' => 'prog106@gmail.com'
-        );
-        $db->Insert($parma, 'ad');
-    }    
+        return $db->Insert($params, 'ad');
+    }
+
+    function ad_update($params, $where) {
+        $db = new MySQL();
+        return $db->Update('ad', $params, $where);
+    }
+
+    function ad_select($params) {
+        $db = new MySQL();
+        return $db->Select('ad', $params);
+    }
 
     function rsslist($slimit=0, $limit=20, $cron_id=1, $where=1) {
         $db = new MySQL();

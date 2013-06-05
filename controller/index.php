@@ -8,6 +8,10 @@ class IndexController {
         include "template/start.html";
     }
 
+    function doalert($ad) {
+        if($ad) include "template/alert_".$ad.".html";
+    }
+
     function index_list($search=1) {
         $cron_id = RSS::cronid();
         $totalcnt = RSS::rsscount($cron_id);

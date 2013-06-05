@@ -1,0 +1,6 @@
+    <script>
+        var topalert = '<div class="alert alert-success" id="alert"><button type="button" class="close" id="close" data-dismiss="alert">&times;</button><strong>Success</strong> You successfully!</div>';
+        $(document.body).prepend(topalert);
+        window.setTimeout(function() { $("#alert").fadeOut('slow', function() {}); }, 3000);
+        $("#close").click(function() { $("#alert").fadeOut('slow', function() {}); });
+    </script>
